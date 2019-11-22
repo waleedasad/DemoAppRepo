@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-BuildAutomationApp/Pods-BuildAutomationApp-resources.sh
+${PODS_ROOT}/CardboardSDK/Resources/MaterialTypography.bundle
+${PODS_ROOT}/CardboardSDK/Resources/GoogleKitHUD.bundle
+${PODS_ROOT}/CardboardSDK/Resources/GoogleKitDialogs.bundle
+${PODS_ROOT}/CardboardSDK/Resources/GoogleKitCore.bundle
+${PODS_ROOT}/CardboardSDK/Resources/CardboardSDK.bundle
+${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle
+${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle

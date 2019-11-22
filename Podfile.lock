@@ -1,0 +1,20 @@
+PODS:
+  - Fabric (1.10.2)
+  - IQKeyboardManager (6.5.4)
+
+DEPENDENCIES:
+  - Fabric
+  - IQKeyboardManager
+
+SPEC REPOS:
+  trunk:
+    - Fabric
+    - IQKeyboardManager
+
+SPEC CHECKSUMS:
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
+
+PODFILE CHECKSUM: 126ef80b30b325045fb7f5e092d1da858f75d495
+
+COCOAPODS: 1.8.4
