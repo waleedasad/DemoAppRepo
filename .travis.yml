@@ -9,6 +9,7 @@ before_install:
   brew update
   gem install xcpretty -N --no-ri --no-doc
   gem update fastlane
+  pod repo update
 install: pod install
 script:
 - |
