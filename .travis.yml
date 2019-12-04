@@ -18,7 +18,7 @@ language: swift
 os: osx
 before_install:
   - openssl aes-256-cbc -K $encrypted_2040ac2a677b_key -iv $encrypted_2040ac2a677b_iv -in scripts.tar.enc -out scripts.tar -d
-  - tar xcf scripts.tar
+  - tar xvf scripts.tar
   - export LANG=en_US.UTF-8
   - brew update
   - brew unlink xctool
