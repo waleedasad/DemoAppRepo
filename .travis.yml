@@ -12,8 +12,4 @@ before_install:
   pod repo update --silent
 install: pod install
 script:
-- |
-  set -o pipefail
-  xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
-# after_success:
-# - ./scripts/travis/testflight.sh
+- set -o pipefail && xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
