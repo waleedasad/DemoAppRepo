@@ -34,8 +34,8 @@ before_script:
 script:
   - set -o pipefail 
   # - xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
-  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination generic/platform=iOS build
-  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/BuildAutomationApp.xcarchive
+  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination generic/platform=iOS build -allowProvisioningUpdates 
+  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration AppStoreDistribution -allowProvisioningUpdates archive -archivePath $PWD/build/BuildAutomationApp.xcarchive
   - xcodebuild -exportArchive -archivePath $PWD/build/BuildAutomationApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
 
 after_script:
