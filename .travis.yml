@@ -1,9 +1,9 @@
-language: objective-c
+language: swift
 os: osx
 xcode_workspace: BuildAutomationApp.xcworkspace
 xcode_scheme: BuildAutomationApp
-xcode_sdk: iphonesimulator9.0
-osx_image: xcode8
+xcode_sdk: iphonesimulator12.4
+osx_image: xcode10.3
 before_install:
 - |
   brew update
