@@ -21,9 +21,6 @@ before_install:
   - tar xvf scripts.tar
   - export LANG=en_US.UTF-8
   - brew update
-  - brew unlink xctool
-  - brew install xctool
-  - brew link xctool
   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty -N --no-ri --no-doc
   - pod repo update --silent
@@ -35,10 +32,14 @@ before_script:
   - scripts/travis/add-key.sh
 
 script:
-  - xctool clean build test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -configuration Release -sdk iphonesimulator12.4 CONFIGURATION_BUILD_DIR='~/build/test/'
-  - xctool clean build -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -configuration Release -sdk iphoneos12.4 CONFIGURATION_BUILD_DIR='~/build/release/'
+  - set -o pipefail 
+  - xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
+  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination generic/platform=iOS build
+  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/BuildAutomationApp.xcarchive
+  - xcodebuild -exportArchive -archivePath $PWD/build/BuildAutomationApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
 
 after_script:
+  - ls
   - scripts/travis/remove-key.sh
 
 after_success:
