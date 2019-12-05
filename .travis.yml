@@ -1,9 +1,9 @@
 language: swift
 osx_image: xcode10.3
-# xcode_workspace: BuildAutomationApp.xcworkspace
-# xcode_scheme: BuildAutomationApp
-# xcode_sdk: iphonesimulator12.4
-# osx_image: xcode10.3
+xcode_workspace: BuildAutomationApp.xcworkspace
+xcode_scheme: BuildAutomationApp
+xcode_sdk: iphonesimulator12.4
+osx_image: xcode10.3
 before_install:
   - openssl aes-256-cbc -K $encrypted_52877dfa483c_key -iv $encrypted_52877dfa483c_iv -in secrets.tar.enc -out secrets.tar -d
   - tar xvf secrets.tar
