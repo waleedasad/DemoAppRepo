@@ -3,7 +3,7 @@ osx_image: xcode10.3
 xcode_workspace: BuildAutomationApp.xcworkspace
 xcode_scheme: BuildAutomationApp
 xcode_sdk: iphonesimulator12.4
-osx_image: xcode10.1
+osx_image: xcode10.3
 
 env:
   global:
