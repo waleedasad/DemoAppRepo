@@ -26,7 +26,7 @@ before_install:
   - export LANG=en_US.UTF-8
   - brew update
   # - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-  - gem install xcpretty -N --no-ri --no-doc
+  # - gem install xcpretty -N --no-ri --no-doc
   # - pod repo update --silent
   - chmod +x scripts/travis/add-key.sh
   - chmod +x scripts/travis/remove-key.sh
