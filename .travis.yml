@@ -34,7 +34,6 @@ before_install:
 install: pod install
 before_script:
   - scripts/travis/add-key.sh
-  - ~/Library/MobileDevice/Provisioning\ Profiles/
 
 script:
   - set -o pipefail && xcodebuild archive -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/BuildAutomationApp.xcarchive | xcpretty
