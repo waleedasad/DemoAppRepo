@@ -20,11 +20,11 @@ before_install:
   - chmod +x scripts/travis/add-key.sh
   - chmod +x scripts/travis/remove-key.sh
   - chmod +x scripts/travis/sign-and-upload.sh
-  - chmod +x scripts/travis/update-bundle.sh
+  # - chmod +x scripts/travis/update-bundle.sh
 install: pod install
 before_script:
   - ./scripts/travis/add-key.sh
-  - ./scripts/travis/update-bundle.sh
+  # - ./scripts/travis/update-bundle.sh
 after_script:
   - ls
   - ./scripts/travis/remove-key.sh
