@@ -16,16 +16,16 @@
 
 language: swift
 os: osx
-xcode_workspace: BuildAutomationApp.xcworkspace
-xcode_scheme: BuildAutomationApp
-xcode_sdk: iphonesimulator12.4
-osx_image: xcode10.3
+# xcode_workspace: BuildAutomationApp.xcworkspace
+# xcode_scheme: BuildAutomationApp
+# xcode_sdk: iphonesimulator12.4
+# osx_image: xcode10.3
 before_install:
   - openssl aes-256-cbc -K $encrypted_2040ac2a677b_key -iv $encrypted_2040ac2a677b_iv -in scripts.tar.enc -out scripts.tar -d
   - tar xvf scripts.tar
   - export LANG=en_US.UTF-8
   - brew update
-  # - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty -N --no-ri --no-doc
   - pod repo update --silent
   - chmod +x scripts/travis/add-key.sh
@@ -37,8 +37,8 @@ before_script:
 
 script:
   - set -o pipefail 
-  - xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
-  # - xcodebuild clean build -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination generic/platform=iOS CODE_SIGNING_REQUIRED=NO
+  # - xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
+  - xcodebuild clean build -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination generic/platform=iOS CODE_SIGNING_REQUIRED=NO
   # - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/BuildAutomationApp.xcarchive CODE_SIGNING_REQUIRED=NO
   # - xcodebuild -exportArchive -archivePath $PWD/build/BuildAutomationApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
 
