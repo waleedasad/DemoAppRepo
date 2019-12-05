@@ -19,6 +19,10 @@ cache:
   bundler: true
   cocoapods: true
 os: osx
+xcode_workspace: BuildAutomationApp.xcworkspace
+xcode_scheme: BuildAutomationApp
+xcode_sdk: iphonesimulator12.4
+osx_image: xcode10.3
 before_install:
   - openssl aes-256-cbc -K $encrypted_2040ac2a677b_key -iv $encrypted_2040ac2a677b_iv -in scripts.tar.enc -out scripts.tar -d
   - tar xvf scripts.tar
