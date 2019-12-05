@@ -9,7 +9,7 @@ env:
   global:
   - APP_NAME="BuildAutomationApp"
   - 'DEVELOPER_NAME="iPhone Distribution: Hafiz Muhammad Junaid (9XV9K9CA6T)"'
-  - PROFILE_NAME="Dist-BuildAutomationApp"
+  - PROFILE_NAME="DistBuildAutomationApp"
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_52877dfa483c_key -iv $encrypted_52877dfa483c_iv -in secrets.tar.enc -out secrets.tar -d
