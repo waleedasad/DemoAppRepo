@@ -15,7 +15,7 @@
 # - set -o pipefail && xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
 
 language: swift
-os: osx
+osx_image: xcode10.3
 before_install:
   - openssl aes-256-cbc -K $encrypted_2040ac2a677b_key -iv $encrypted_2040ac2a677b_iv -in scripts.tar.enc -out scripts.tar -d
   - tar xvf scripts.tar
@@ -35,8 +35,8 @@ script:
   - set -o pipefail 
   # - xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
   - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination generic/platform=iOS build CODE_SIGNING_REQUIRED=NO
-  - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/BuildAutomationApp.xcarchive CODE_SIGNING_REQUIRED=NO
-  - xcodebuild -exportArchive -archivePath $PWD/build/BuildAutomationApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
+  # - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration AppStoreDistribution archive -archivePath $PWD/build/BuildAutomationApp.xcarchive CODE_SIGNING_REQUIRED=NO
+  # - xcodebuild -exportArchive -archivePath $PWD/build/BuildAutomationApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
 
 after_script:
   - ls
