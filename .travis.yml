@@ -15,7 +15,7 @@
 # - set -o pipefail && xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
 
 language: swift
-osx_image: xcode10.1
+osx_image: xcode10.3
 # xcode_workspace: BuildAutomationApp.xcworkspace
 # xcode_scheme: BuildAutomationApp
 # xcode_sdk: iphonesimulator12.4
