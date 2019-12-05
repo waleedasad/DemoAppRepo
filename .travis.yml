@@ -1,18 +1,3 @@
-# language: swift
-# os: osx
-# xcode_workspace: BuildAutomationApp.xcworkspace
-# xcode_scheme: BuildAutomationApp
-# xcode_sdk: iphonesimulator12.4
-# osx_image: xcode10.3
-# before_install:
-# - |
-#   brew update
-#   gem install xcpretty -N --no-ri --no-doc
-#   gem update fastlane
-#   pod repo update --silent
-# install: pod install
-# script:
-# - set -o pipefail && xcodebuild clean test -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
 language: swift
 osx_image: xcode10.3
 # xcode_workspace: BuildAutomationApp.xcworkspace
@@ -21,7 +6,7 @@ osx_image: xcode10.3
 # osx_image: xcode10.3
 before_install:
   - openssl aes-256-cbc -K $encrypted_52877dfa483c_key -iv $encrypted_52877dfa483c_iv -in secrets.tar.enc -out secrets.tar -d
-  - tar xvf scripts.tar
+  - tar xvf secrets.tar
   - export LANG=en_US.UTF-8
   - brew update
   # - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
