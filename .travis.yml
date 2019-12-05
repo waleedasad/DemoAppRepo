@@ -28,7 +28,7 @@ before_install:
   - tar xvf scripts.tar
   - export LANG=en_US.UTF-8
   - brew update
-  - gem install cocoapods --no-ri --no-document --quiet
+  # - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty -N --no-ri --no-doc
   - pod repo update --silent
   - chmod +x scripts/travis/add-key.sh
