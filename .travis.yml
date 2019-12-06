@@ -25,7 +25,7 @@ install:
   - pod install
 before_script:
   - ./scripts/travis/add-key.sh
-  - ./scripts/travis/update-bundle.sh
+  # - ./scripts/travis/update-bundle.sh
 after_script:
   - ls
   - ./scripts/travis/remove-key.sh
