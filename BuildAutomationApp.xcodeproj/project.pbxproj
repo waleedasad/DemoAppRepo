@@ -185,7 +185,7 @@
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
