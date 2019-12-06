@@ -21,7 +21,6 @@ before_install:
   - chmod +x scripts/travis/remove-key.sh
   - chmod +x scripts/travis/sign-and-upload.sh
   - rvm use system
-  - sudo gem install cocoapods -v '0.39.0'
   # - chmod +x scripts/travis/update-bundle.sh
 install: pod install
 before_script:
