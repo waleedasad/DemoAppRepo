@@ -7,8 +7,8 @@ xcode_sdk: iphonesimulator12.4
 env:
   global:
   - APP_NAME="BuildAutomationApp"
-  - 'DEVELOPER_NAME="iPhone Distribution: Hafiz Muhammad Junaid (9XV9K9CA6T)"'
-  - PROFILE_NAME="DistBuildAutomationApp"
+  - 'DEVELOPER_NAME="iPhone Distribution: PumpJack Dataworks,Inc (T8WLPGSFGG)"'
+  - PROFILE_NAME="BuildAutoDist"
   - INFO_PLIST = "DemoAppRepo/exportOptions.plist"
 
 before_install:
