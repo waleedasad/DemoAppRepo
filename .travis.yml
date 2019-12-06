@@ -22,7 +22,6 @@ before_install:
   - chmod +x scripts/travis/sign-and-upload.sh
 install: 
   - pod install
-  - travis_wait 30 mvn install
 before_script:
   - ./scripts/travis/add-key.sh
   - ./scripts/travis/update-bundle.sh
