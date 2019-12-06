@@ -30,7 +30,7 @@ after_script:
   - ls
   - ./scripts/travis/remove-key.sh
 after_success:
-  - ./scripts/travis/sign-and-upload.sh  
+  - bash scripts/travis/sign-and-upload.sh  
 script:
   - xcodebuild -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
   # - xctool -workspace BuildAutomationApp.xcworkspace -scheme BuildAutomationApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
